@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #24253d;
+  background: #f6f7fb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 76px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e9eaf1;
+}
+
+.brand {
+  color: #635bdb;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.8px;
+}
+
+.live-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #55566d;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #20b981;
+}
+
+.container {
+  width: min(1100px, 88%);
+  margin: 0 auto;
+}
+
+.welcome {
+  padding: 48px 0 28px;
+}
+
+.eyebrow {
+  color: #7167df;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: -1.5px;
+}
+
+.subtitle,
+.section-heading p {
+  color: #77788e;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.stat-card {
+  position: relative;
+  padding: 23px;
+  background: white;
+  border: 1px solid #e9eaf2;
+  border-radius: 17px;
+  box-shadow: 0 5px 20px #34345a06;
+}
+
+.stat-card p {
+  margin: 0 0 12px;
+  color: #74758a;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.stat-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 17px;
+  border-radius: 11px;
+  font-weight: 800;
+}
+
+.available-icon {
+  color: #16855e;
+  background: #e4f8ef;
+}
+
+.busy-icon {
+  color: #b87915;
+  background: #fff3d8;
+}
+
+.away-icon {
+  color: #7773bc;
+  background: #efedff;
+}
+
+.team-section {
+  padding: 40px 0 55px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.section-heading p {
+  margin: 7px 0 0;
+  font-size: 14px;
+}
+
+#teamCount {
+  color: #77788e;
+  font-size: 13px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.member-card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #e7e8f1;
+  border-radius: 17px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 25px #34345a0d;
+}
+
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 21px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #eeecff;
+  color: #6258ce;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.member-name {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.member-role {
+  margin: 0;
+  color: #85869a;
+  font-size: 13px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.status-badge {
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-Available {
+  background: #e3f8ed;
+  color: #16855e;
+}
+
+.status-Busy {
+  background: #fff2d6;
+  color: #a96c0c;
+}
+
+.status-Away {
+  background: #efedff;
+  color: #6b62bd;
+}
+
+select {
+  max-width: 145px;
+  padding: 9px 10px;
+  border: 1px solid #e0e1ec;
+  border-radius: 9px;
+  background: white;
+  color: #44455b;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+select:disabled {
+  opacity: 0.6;
+}
+
+#message {
+  min-height: 20px;
+  color: #655bd1;
+  font-size: 13px;
+}
+
+footer {
+  padding: 22px 0 30px;
+  border-top: 1px solid #e5e6ef;
+  color: #85869a;
+  font-size: 12px;
+  text-align: center;
+}
+
+footer .live-dot {
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    padding: 0 6%;
+  }
+
+  .container {
+    width: 88%;
+  }
+
+  .stats {
+    gap: 9px;
+  }
+
+  .stat-card {
+    padding: 15px 12px;
+  }
+
+  .stat-card h2 {
+    font-size: 26px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .status-row {
+    flex-wrap: wrap;
+  }
+}

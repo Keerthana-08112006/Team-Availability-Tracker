@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Availability Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">TeamPulse</a>
+    <span class="live-label"><span class="live-dot"></span> Live Team Status</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">TEAM WORKSPACE</p>
+      <h1>Who's available?</h1>
+      <p class="subtitle">See your team's availability and keep everyone in sync.</p>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <span class="stat-icon available-icon">✓</span>
+        <p>Available</p>
+        <h2 id="availableCount">0</h2>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon busy-icon">⌛</span>
+        <p>Busy</p>
+        <h2 id="busyCount">0</h2>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon away-icon">◷</span>
+        <p>Away</p>
+        <h2 id="awayCount">0</h2>
+      </article>
+    </section>
+
+    <section class="team-section">
+      <div class="section-heading">
+        <div>
+          <h2>Your team</h2>
+          <p>Update a member's status below.</p>
+        </div>
+        <span id="teamCount">0 members</span>
+      </div>
+
+      <div id="teamList" class="team-grid">
+        <p>Loading team members...</p>
+      </div>
+      <p id="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <footer>
+      <span class="live-dot"></span>
+      Status refreshes automatically every 5 seconds
+    </footer>
+  </main>
+</body>
+</html>
